@@ -1,4 +1,5 @@
 # 核心設定
+title: "Jocelyn's Lab"
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "air" # 你可以換成 air, aqua, contrast 等
 locale: "zh-TW"
