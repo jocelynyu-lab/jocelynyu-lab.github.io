@@ -7,8 +7,6 @@ header:
   overlay_filter: "0.6"
   overlay_image: /assets/images/header.jpg
 
-  caption: "Data-driven financial analysis"
-
   actions:
     - label: "Explore Insights"
       url: "/insights/"
