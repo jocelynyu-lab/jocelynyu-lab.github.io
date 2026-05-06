@@ -15,16 +15,17 @@ header:
     - label: "View Projects"
       url: "/projects/"
 
-excerpt: "資料x關係x金融"
----
-feature_row:
-  - title: "A"
-  - title: "B"
+excerpt: "用資料與圖譜解構金融風險"
 
-feature_row2:
-  - title: "C"
-  - title: "D"
+feature_row:
+  - title: "Supply Chain Risk"
+    excerpt: "分析上下游關聯風險"
+
+  - title: "Graph Analytics"
+    excerpt: "用網絡理解企業關係"
+
+  - title: "Financial Insights"
+    excerpt: "資料驅動決策"
 ---
 
 {% include feature_row %}
-{% include feature_row id="feature_row2" %}
