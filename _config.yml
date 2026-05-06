@@ -13,6 +13,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
 
+sass:
+  style: compressed
+
 # 這裡最重要！告訴 Jekyll 所有的文章和頁面都要套用 "single" 或 "home" 佈局
 defaults:
   - scope:
