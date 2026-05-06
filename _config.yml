@@ -1,0 +1,27 @@
+# 核心設定
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default" # 你可以換成 air, aqua, contrast 等
+locale: "zh-TW"
+
+# 網址設定 (請確保這裡填對，這影響 CSS 路徑)
+url: "https://jocelynyu-lab.github.io"
+baseurl: ""
+
+# 插件
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# 這裡最重要！告訴 Jekyll 所有的文章和頁面都要套用 "single" 或 "home" 佈局
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
