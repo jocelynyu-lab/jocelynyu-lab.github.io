@@ -1,6 +1,6 @@
 # 核心設定
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default" # 你可以換成 air, aqua, contrast 等
+minimal_mistakes_skin: "air" # 你可以換成 air, aqua, contrast 等
 locale: "zh-TW"
 
 # 網址設定 (請確保這裡填對，這影響 CSS 路徑)
