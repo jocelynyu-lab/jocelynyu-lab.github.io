@@ -17,3 +17,14 @@ header:
 
 excerpt: "資料x關係x金融"
 ---
+feature_row:
+  - title: "A"
+  - title: "B"
+
+feature_row2:
+  - title: "C"
+  - title: "D"
+---
+
+{% include feature_row %}
+{% include feature_row id="feature_row2" %}
