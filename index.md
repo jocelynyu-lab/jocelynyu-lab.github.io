@@ -15,17 +15,17 @@ header:
     - label: "View Projects"
       url: "/projects/"
 
-excerpt: "用資料與圖譜解構金融風險"
+excerpt: "From different perspectives"
 
 feature_row:
-  - title: "Supply Chain Risk"
-    excerpt: "分析上下游關聯風險"
+  - title: "Opportunity & Risk"
+    excerpt: "機會與風險"
 
   - title: "Graph Analytics"
-    excerpt: "用網絡理解企業關係"
+    excerpt: "網絡理解"
 
   - title: "Financial Insights"
-    excerpt: "資料驅動決策"
+    excerpt: "資料驅動"
 ---
 
 {% include feature_row %}
