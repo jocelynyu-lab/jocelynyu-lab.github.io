@@ -189,6 +189,74 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .page__content .lab-about .lab-section__title { border-bottom: 2px solid $lab-ink; padding-bottom: .5em; margin-bottom: 1em; }
 .lab-about p { font-size: .9em; }
 
+/* ── 文章排版元件 ── */
+/* 提示框：重點摘要、分析限制 */
+.page__content .notice--info,
+.page__content .notice--warning {
+  background: $lab-mist;
+  border-left: 3px solid $lab-ink;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.1em 1.4em;
+  margin: 1.5em 0 2em;
+  font-size: .85em;
+  line-height: 1.8;
+  color: $lab-text;
+}
+.page__content .notice--warning { background: #FBF5EC; border-left-color: $lab-amber; }
+.page__content .notice--info p, .page__content .notice--warning p,
+.page__content .notice--info li { font-size: 1em; }
+.page__content .notice--info ul { margin: .4em 0 0; padding-left: 1.2em; }
+.page__content .notice--info li { margin-bottom: .2em; }
+.page__content .notice--info strong:first-child { color: $lab-ink; }
+
+/* 引言：全文論點錨點 */
+.page__content blockquote {
+  border-left: 3px solid $lab-amber;
+  margin: 1.75em 0;
+  padding: .2em 0 .2em 1.25em;
+  font-style: normal;
+  font-size: 1.05em;
+  font-weight: 500;
+  color: $lab-ink;
+  line-height: 1.75;
+}
+
+/* 表格 */
+.page__content table {
+  display: table;
+  width: 100%;
+  font-size: .78em;
+  border-collapse: collapse;
+  margin: 1.25em 0 1.75em;
+  border-top: 2px solid $lab-ink;
+}
+.page__content thead { background: transparent; border-bottom: 1px solid $lab-ink; }
+.page__content th { font-weight: 700; color: $lab-ink; padding: .6em .75em; border: 0; }
+.page__content td { padding: .6em .75em; border: 0; border-bottom: 1px solid $lab-line; font-variant-numeric: tabular-nums; }
+.page__content tbody tr:last-child td { border-bottom: 1px solid $lab-ink; }
+@media (max-width: 600px) { .page__content table { display: block; overflow-x: auto; white-space: nowrap; } }
+
+/* 圖片與圖說 */
+.page__content figure { display: block; margin: 2em 0; }
+.page__content figure img { width: 100%; border: 1px solid $lab-line; }
+.page__content figcaption { font-size: .72em; color: $lab-muted; margin-top: .6em; line-height: 1.6; }
+
+/* 目錄 */
+.toc { border-color: $lab-line; box-shadow: none; font-size: .8em; }
+.toc .nav__title { background: transparent; color: $lab-ink; border-bottom: 2px solid $lab-ink; padding: .6em 1em; font-size: 1em; }
+.toc__menu a { color: $lab-muted; border-bottom-color: $lab-line; }
+.toc__menu a:hover, .toc__menu a.active { color: $lab-ink; background: $lab-mist; }
+
+/* 免責聲明 */
+.page__content .lab-disclaimer {
+  font-size: .72em;
+  color: $lab-muted;
+  border-top: 1px solid $lab-line;
+  padding-top: 1em;
+  margin-top: 2.5em;
+}
+
 /* 專案標籤 */
 .lab-tags { display: flex; flex-wrap: wrap; gap: .4em; margin-top: .75em; }
 .lab-tag {
