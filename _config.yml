@@ -29,3 +29,16 @@ defaults:
       type: pages
     values:
       layout: single
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: false
+
+# ── 專案集合（卡片式 Projects 頁使用）──
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
