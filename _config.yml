@@ -3,7 +3,7 @@ title: "Jocelyn's Lab"
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default" # 你可以換成 air, aqua, contrast 等
 locale: "zh-TW"
-
+permalink: /posts/:title/
 # 網址設定 (請確保這裡填對，這影響 CSS 路徑)
 url: "https://jocelynyu-lab.github.io"
 baseurl: ""
