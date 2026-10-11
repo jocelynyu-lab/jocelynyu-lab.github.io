@@ -5,15 +5,15 @@ excerpt: "家庭成員的許願天地，紀錄每道食譜的喜好"
 header:
   teaser: /assets/images/projects/family-recipes.svg
   overlay_image: /assets/images/header.jpg
-  overlay_filter: 0.6
+  overlay_filter: 0.25
 tags:
   - HTML
   - Firebase
 ---
 
 
-[Visit Website](https://jocelynyu-lab.github.io/family-recipes/)
-[Visit GitHub](https://github.com/jocelynyu-lab/family-recipes)
+- [Visit Website](https://jocelynyu-lab.github.io/family-recipes/)
+- [Visit GitHub](https://github.com/jocelynyu-lab/family-recipes)
 
 ### 🎯 專案說明
 我們家成員常常會點餐
