@@ -8,6 +8,7 @@ header:
   overlay_filter: 0.25
 tags:
   - HTML
+  - Javascript
   - Firebase
 ---
 
