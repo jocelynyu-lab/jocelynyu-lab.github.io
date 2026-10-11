@@ -1,0 +1,25 @@
+{%- comment -%}
+  首頁「最新觀點」：自動列出最新文章
+  摘要優先使用文章 front matter 的 excerpt，沒有的話取內文開頭
+{%- endcomment -%}
+{%- assign limit = include.limit | default: 5 -%}
+{%- if site.posts.size > 0 -%}
+<ol class="lab-posts">
+  {%- for post in site.posts limit: limit %}
+  <li class="lab-posts__item">
+    <time class="lab-posts__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+    <div class="lab-posts__body">
+      <h3 class="lab-posts__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {%- if post.excerpt %}
+      <p class="lab-posts__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 90 }}</p>
+      {%- endif %}
+    </div>
+    {%- if post.categories.size > 0 %}
+    <span class="lab-posts__cat">{{ post.categories | first }}</span>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ol>
+{%- else -%}
+<p class="lab-empty">第一篇觀點正在撰寫中。</p>
+{%- endif -%}
