@@ -1,17 +1,22 @@
 ---
 layout: single
-title: About Me
+title: "關於我"
 author_profile: true
 permalink: /about/
 ---
 
-I am a professional working at the intersection of the financial industry and data science, with a strong focus on transforming complex data into actionable insights that support better decision-making.
+我在金融業工作，位於金融產業與資料科學的交會處，專注於把複雜的資料轉化為能支持決策的洞察。
 
+兼具金融與資料分析的背景，我擅長建立連結業務需求與量化方法的分析框架。我的工作運用統計模型、機器學習與圖譜思維，從資料中找出模式、優化流程，並創造策略價值。
 
-With experience in both finance and data-driven problem solving, I specialize in building analytical frameworks that bridge business needs with quantitative methods. My work involves applying statistical modeling, machine learning, and graph-based thinking to uncover patterns, optimize processes, and generate strategic value.
+我特別關心資料如何重塑金融體系、深化對風險的理解，以及提升營運效率。我喜歡需要同時具備領域知識與技術深度的問題，尤其是在講求結構化思考與精確度的環境中。
 
-I am particularly interested in how data can reshape financial systems, improve risk understanding, and enhance operational efficiency. I enjoy working on problems that require both domain knowledge and technical depth, especially in environments where structured thinking and precision are critical.
+工作之外，我持續關注資料科學、AI 與金融科技的發展。
 
+## 這個網站
 
-Outside of my core work, I continuously explore advancements in data science, AI, and financial technology to stay at the forefront of industry innovation.
+這裡是我整理觀點的地方。每篇文章都會先寫結論，再交代資料與推論過程；專案頁則記錄我做過的分析與系統。
 
+## 聯絡
+
+歡迎透過 [GitHub](https://github.com/jocelynyu-lab) 與我聯繫。

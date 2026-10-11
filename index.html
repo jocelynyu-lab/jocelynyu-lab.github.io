@@ -1,0 +1,43 @@
+---
+layout: splash
+title: "Jocelyn's Lab"
+excerpt: "金融 × 資料 x 科學"
+---
+
+<section class="lab-hero">
+  <div class="lab-hero__inner">
+    <div class="lab-hero__text">
+      <h1 class="lab-hero__title">從資料到<br>應用與決策。</h1>
+      <p class="lab-hero__lead">這裡記錄我工作、專業、興趣相關的觀點與專案。</p>
+      <p class="lab-hero__actions">
+        <a href="{{ '/insights/' | relative_url }}" class="btn btn--lab-primary">閱讀觀點</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn--lab-ghost">查看專案</a>
+      </p>
+    </div>
+    <div class="lab-hero__graph" aria-hidden="true">
+      <img src="{{ '/assets/images/hero-graph.svg' | relative_url }}" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="lab-section">
+  <div class="lab-section__head">
+    <h2 class="lab-section__title">最新觀點</h2>
+    <a class="lab-section__more" href="{{ '/posts/' | relative_url }}">所有文章</a>
+  </div>
+  {% include home_latest_posts.html limit=5 %}
+</section>
+
+<section class="lab-section">
+  <div class="lab-section__head">
+    <h2 class="lab-section__title">專案</h2>
+    <a class="lab-section__more" href="{{ '/projects/' | relative_url }}">所有專案</a>
+  </div>
+  {% include project_cards.html home=true limit=3 %}
+</section>
+
+<section class="lab-section lab-about">
+  <h2 class="lab-section__title">關於我</h2>
+  <p>任職於金融業，工作橫跨企業金融、生成式 AI 應用與知識圖譜開發，習慣在業務需求與量化方法之間搭橋。這個網站是我的觀點與實作的匯集空間。</p>
+  <p><a href="{{ '/about/' | relative_url }}">更多關於我</a></p>
+</section>

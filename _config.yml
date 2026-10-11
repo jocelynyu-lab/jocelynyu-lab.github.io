@@ -1,22 +1,55 @@
-# 核心設定
+# ── 網站基本資訊 ──
 title: "Jocelyn's Lab"
+title_separator: "|"
+description: "金融 × 資料科學。用資料與圖譜理解風險、產業與決策。"
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default" # 你可以換成 air, aqua, contrast 等
+minimal_mistakes_skin: "default"
 locale: "zh-TW"
-permalink: /posts/:title/
-# 網址設定 (請確保這裡填對，這影響 CSS 路徑)
 url: "https://jocelynyu-lab.github.io"
 baseurl: ""
+permalink: /posts/:title/
+og_image: /assets/images/header.jpg
+teaser: /assets/images/header.jpg
+date_format: "%Y-%m-%d"
 
-# 插件
+# ── 作者資訊（顯示在文章側欄與頁尾）──
+author:
+  name: "Jocelyn"
+  bio: "金融 × 資料科學｜知識圖譜・風險分析"
+  # 放一張大頭照到 assets/images/avatar.jpg 後，把下一行的 # 拿掉
+  # avatar: "/assets/images/avatar.jpg"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jocelynyu-lab"
+    # 有 LinkedIn 的話，填好網址後把下面三行的 # 拿掉
+    # - label: "LinkedIn"
+    #   icon: "fab fa-fw fa-linkedin"
+    #   url: "https://www.linkedin.com/in/你的帳號"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/jocelynyu-lab"
+
+# ── 插件（皆為 GitHub Pages 支援的白名單插件）──
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
 
 sass:
   style: compressed
 
-# 這裡最重要！告訴 Jekyll 所有的文章和頁面都要套用 "single" 或 "home" 佈局
+# ── 專案集合 ──
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# ── 各類頁面的預設版型 ──
 defaults:
   - scope:
       path: ""
@@ -24,6 +57,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: true
+      show_date: true
+      related: false
+      share: false
   - scope:
       path: ""
       type: pages
@@ -36,9 +73,3 @@ defaults:
       layout: single
       author_profile: true
       share: false
-
-# ── 專案集合（卡片式 Projects 頁使用）──
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
