@@ -1,0 +1,29 @@
+---
+title: "觀點"
+layout: splash
+permalink: /insights/
+excerpt: "依主題整理的分析與觀點。每篇文章先寫結論，再交代資料與推論過程。"
+---
+{% include page_head.html %}
+
+{%- assign cats = site.categories | sort -%}
+{%- if cats.size > 0 %}
+<nav class="lab-topics" aria-label="主題">
+  {%- for c in cats %}
+  <a class="lab-topics__item" href="#{{ c[0] | slugify }}">{{ c[0] }}<span>{{ c[1].size }}</span></a>
+  {%- endfor %}
+</nav>
+
+{%- for c in cats %}
+<section class="lab-section lab-topic" id="{{ c[0] | slugify }}">
+  <div class="lab-section__head">
+    <h2 class="lab-section__title">{{ c[0] }}</h2>
+    <span class="lab-section__count">{{ c[1].size }} 篇</span>
+  </div>
+  {%- assign cat_posts = c[1] %}
+  {% include post_list.html posts=cat_posts show_cat=false %}
+</section>
+{%- endfor %}
+{%- else %}
+<p class="lab-empty">第一篇觀點正在撰寫中。</p>
+{%- endif %}

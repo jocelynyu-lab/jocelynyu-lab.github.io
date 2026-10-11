@@ -1,0 +1,20 @@
+{%- comment -%}
+  文章清單（首頁、觀點頁、所有文章頁共用）
+  參數：posts=文章陣列  show_cat=false 可隱藏分類標籤
+{%- endcomment -%}
+<ol class="lab-posts">
+  {%- for post in include.posts %}
+  <li class="lab-posts__item">
+    <time class="lab-posts__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+    <div class="lab-posts__body">
+      <h3 class="lab-posts__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {%- if post.excerpt %}
+      <p class="lab-posts__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 90 }}</p>
+      {%- endif %}
+    </div>
+    {%- if include.show_cat != false and post.categories.size > 0 %}
+    <span class="lab-posts__cat">{{ post.categories | first }}</span>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ol>

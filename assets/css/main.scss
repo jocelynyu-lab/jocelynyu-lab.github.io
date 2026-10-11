@@ -18,8 +18,9 @@ $lab-line: #D9E0E7;
 $lab-mist: #F3F6F9;
 $lab-muted: #5B6878;
 
-$sans-serif: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
-$serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+/* 全站黑體：Windows 用微軟正黑體；Mac / iPhone 沒有正黑體，改用同風格的思源黑體 */
+$sans-serif: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", -apple-system, BlinkMacSystemFont, sans-serif;
+$serif: $sans-serif;
 $global-font-family: $sans-serif;
 $header-font-family: $serif;
 $text-color: $lab-text;
@@ -40,17 +41,25 @@ body { letter-spacing: .01em; }
 .page__content { line-height: 1.85; }
 .page__content p, .page__content li { max-width: 40em; }
 .page__content h2 {
-  border-bottom: 1px solid $lab-line;
-  padding-bottom: .4em;
-  margin-top: 2.2em;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 1.6em;
+  font-size: 1.3em;
 }
-.page__title { color: $lab-ink; }
+.page__content h3 { font-size: 1.1em; }
+.page__content hr { border: 0; border-top: 1px solid $lab-line; margin: 1.6em 0; }
+.layout--single .page__inner-wrap header { margin-bottom: 1.75em; padding-bottom: 1.25em; border-bottom: 1px solid $lab-line; }
+.layout--single .page__content > h2:first-child { margin-top: 0; }
+.page__meta { margin-top: .6em; }
+.page__title { font-size: 1.9em; line-height: 1.35; letter-spacing: .01em; }
+.page__meta { color: $lab-muted; }
+.page__title { color: $lab-ink; font-weight: 700; }
 a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-offset: 3px; }
 
 /* 頁首 */
 .masthead { border-bottom: 1px solid $lab-line; }
 .masthead__menu-item a { font-weight: 500; }
-.site-title { font-family: $serif; font-weight: 700; color: $lab-ink; }
+.site-title { font-weight: 700; color: $lab-ink; letter-spacing: .01em; }
 
 /* 頁尾 */
 .page__footer { background-color: $lab-ink; color: #C9D7E4; }
@@ -77,12 +86,6 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   align-items: center;
   gap: 2em;
-}
-.lab-hero__name {
-  font-family: $serif;
-  font-size: 1em;
-  color: $lab-amber;
-  margin: 0 0 1em;
 }
 .lab-hero__title {
   font-family: $serif;
@@ -186,9 +189,38 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .page__content .lab-about .lab-section__title { border-bottom: 2px solid $lab-ink; padding-bottom: .5em; margin-bottom: 1em; }
 .lab-about p { font-size: .9em; }
 
+/* 內頁標題區（觀點、所有文章、專案） */
+.lab-page-head { padding: 2.75em 0 0; }
+.lab-page-head__title { font-size: 1.9em; color: $lab-ink; margin: 0 0 .4em; font-weight: 700; }
+.lab-page-head__lead { color: $lab-muted; font-size: .9em; line-height: 1.8; margin: 0; max-width: 36em; }
+.lab-section__count { font-size: .75em; color: $lab-muted; }
+.lab-section--flush { padding-top: 1em; }
+.lab-topics { display: flex; flex-wrap: wrap; gap: .5em; margin: 1.75em 0 0; }
+.lab-topics__item {
+  font-size: .8em;
+  color: $lab-ink;
+  text-decoration: none;
+  border: 1px solid $lab-line;
+  border-radius: 2px;
+  padding: .35em .85em;
+}
+.lab-topics__item span { color: $lab-muted; margin-left: .5em; font-variant-numeric: tabular-nums; }
+.lab-topics__item:hover { border-color: $lab-ink; }
+.lab-topic { scroll-margin-top: 5em; }
+.lab-page-head + .lab-section, .lab-topics + .lab-section { padding-top: 2em; }
+
+/* 手機與平板：隱藏作者側欄，讓文章直接從標題開始 */
+@media (max-width: 1023px) {
+  .layout--single .sidebar { display: none; }
+}
+
 @media (max-width: 800px) {
+  .lab-page-head { padding-top: 2em; }
+  .lab-page-head__title, .page__title { font-size: 1.6em; }
+  #main { margin-top: 1.25em; }
   .lab-hero__inner { grid-template-columns: 1fr; padding: 3em 1.25em 2.5em; }
-  .lab-hero__graph { order: -1; max-width: 22em; opacity: .8; }
+  .lab-hero__graph { order: -1; max-width: 18em; opacity: .8; }
+  .lab-hero__graph img { max-height: 11em; }
   .lab-hero__title { font-size: 1.6em; }
   .lab-posts__item { grid-template-columns: 1fr; gap: .35em; }
   .lab-posts__cat { justify-self: start; }
