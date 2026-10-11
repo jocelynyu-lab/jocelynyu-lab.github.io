@@ -1,7 +1,7 @@
 main:
-  - title: "觀點"
+  - title: "Insights"
     url: /insights/
-  - title: "專案"
+  - title: "Projects"
     url: /projects/
-  - title: "關於"
+  - title: "About"
     url: /about/
