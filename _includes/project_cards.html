@@ -1,0 +1,31 @@
+{%- comment -%}
+  首頁專案卡片：自動讀取 _projects/ 資料夾
+  - 依 front matter 的 order 排序（小的在前）
+  - 某個專案不想出現在首頁 → 在該檔加 show_on_home: false
+  - 用法：{% include project_cards.html %}，可加 limit=3 限制張數
+{%- endcomment -%}
+{%- assign projects = site.projects | sort: "order" | where_exp: "p", "p.show_on_home != false" -%}
+{%- if include.limit -%}{%- assign projects = projects | slice: 0, include.limit -%}{%- endif -%}
+
+<div class="feature__wrapper">
+  {%- for p in projects %}
+  <div class="feature__item">
+    <div class="archive__item">
+      {%- if p.header.teaser %}
+      <div class="archive__item-teaser">
+        <a href="{{ p.url | relative_url }}"><img src="{{ p.header.teaser | relative_url }}" alt="{{ p.title }}"></a>
+      </div>
+      {%- endif %}
+      <div class="archive__item-body">
+        <h2 class="archive__item-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h2>
+        {%- if p.excerpt %}
+        <div class="archive__item-excerpt">
+          <p>{{ p.excerpt | strip_html | truncate: 120 }}</p>
+        </div>
+        {%- endif %}
+        <p><a href="{{ p.url | relative_url }}" class="btn btn--primary">了解更多</a></p>
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
