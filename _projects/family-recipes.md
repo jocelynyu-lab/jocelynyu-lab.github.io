@@ -12,8 +12,8 @@ tags:
 ---
 
 
-[Visit Site](https://jocelynyu-lab.github.io/family-recipes/)
-[Visit GitHub]((https://github.com/jocelynyu-lab/family-recipes)
+[Visit Website](https://jocelynyu-lab.github.io/family-recipes/)
+[Visit GitHub](https://github.com/jocelynyu-lab/family-recipes)
 
 ### 🎯 專案說明
 我們家成員常常會點餐
