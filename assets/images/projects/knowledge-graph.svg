@@ -1,10 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#134e5e"/><stop offset="1" stop-color="#71b280"/></linearGradient></defs>
-  <rect width="500" height="300" fill="url(#g)"/>
-  <g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2">
-    <circle cx="400" cy="70" r="60"/><circle cx="430" cy="240" r="35"/><circle cx="70" cy="250" r="45"/>
-    <line x1="400" y1="70" x2="430" y2="240"/><line x1="430" y1="240" x2="70" y2="250"/>
-  </g>
-  <text x="40" y="160" font-family="sans-serif" font-size="34" font-weight="700" fill="#fff">Knowledge Graph</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+<rect width="500" height="300" fill="#14304D"/>
+<g stroke="#9FB6CC" stroke-opacity=".35" stroke-width="1">
+<line x1="321" y1="104" x2="294" y2="176"/>
+<line x1="200" y1="244" x2="261" y2="165"/>
+<line x1="294" y1="176" x2="200" y2="244"/>
+<line x1="442" y1="257" x2="391" y2="207"/>
+<line x1="227" y1="94" x2="235" y2="106"/>
+<line x1="442" y1="257" x2="439" y2="161"/>
+<line x1="391" y1="207" x2="439" y2="161"/>
+<line x1="221" y1="124" x2="235" y2="106"/>
+<line x1="139" y1="36" x2="177" y2="63"/>
+<line x1="442" y1="257" x2="344" y2="269"/>
+<line x1="391" y1="207" x2="344" y2="269"/>
+<line x1="55" y1="37" x2="139" y2="36"/>
+<line x1="64" y1="50" x2="139" y2="36"/>
+<line x1="221" y1="124" x2="261" y2="165"/>
+<line x1="321" y1="104" x2="284" y2="68"/>
+<line x1="284" y1="68" x2="235" y2="106"/>
+<line x1="294" y1="176" x2="261" y2="165"/>
+<line x1="227" y1="94" x2="177" y2="63"/>
+<line x1="64" y1="50" x2="55" y2="37"/>
+<line x1="221" y1="124" x2="227" y2="94"/>
+</g><g fill="#C9D7E4" fill-opacity=".7">
+<circle cx="442" cy="257" r="2.5"/>
+<circle cx="64" cy="50" r="2.5"/>
+<circle cx="391" cy="207" r="2.5"/>
+<circle cx="321" cy="104" r="2.5"/>
+<circle cx="294" cy="176" r="2.5"/>
+<circle cx="284" cy="68" r="2.5"/>
+<circle cx="221" cy="124" r="2.5"/>
+<circle cx="344" cy="269" r="2.5"/>
+<circle cx="439" cy="161" r="2.5"/>
+<circle cx="227" cy="94" r="2.5"/>
+<circle cx="55" cy="37" r="2.5"/>
+<circle cx="235" cy="106" r="2.5"/>
+<circle cx="200" cy="244" r="2.5"/>
+<circle cx="261" cy="165" r="2.5"/>
+<circle cx="139" cy="36" r="2.5"/>
+<circle cx="177" cy="63" r="2.5"/>
+</g><circle cx="235" cy="106" r="5" fill="#E0A458"/></svg>

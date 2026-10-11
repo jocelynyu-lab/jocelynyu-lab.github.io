@@ -2,30 +2,194 @@
 # Only the main Sass file needs front matter
 ---
 
+/* ── 設計 tokens ──────────────────────────────
+   ink      #0E2238  深海藍：主色、標題、頁尾
+   text     #1B2430  內文
+   steel    #2E6F95  連結
+   amber    #E0A458  唯一的強調色（風險傳遞路徑）
+   line     #D9E0E7  分隔線
+   mist     #F3F6F9  淺底
+──────────────────────────────────────────── */
+$lab-ink: #0E2238;
+$lab-text: #1B2430;
+$lab-steel: #2E6F95;
+$lab-amber: #E0A458;
+$lab-line: #D9E0E7;
+$lab-mist: #F3F6F9;
+$lab-muted: #5B6878;
+
+$sans-serif: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif;
+$serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+$global-font-family: $sans-serif;
+$header-font-family: $serif;
+$text-color: $lab-text;
+$primary-color: $lab-ink;
+$link-color: $lab-steel;
+$link-color-hover: $lab-ink;
+$link-color-visited: $lab-steel;
+$masthead-link-color: $lab-ink;
+$masthead-link-color-hover: $lab-steel;
+$border-color: $lab-line;
+$footer-background-color: $lab-ink;
+
+@import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
-/* 主色（按鈕、連結） */
-a {
-  color: #0B1F3B;   // 深藍（McKinsey感）
+/* ── 全站 ── */
+body { letter-spacing: .01em; }
+.page__content { line-height: 1.85; }
+.page__content p, .page__content li { max-width: 40em; }
+.page__content h2 {
+  border-bottom: 1px solid $lab-line;
+  padding-bottom: .4em;
+  margin-top: 2.2em;
 }
+.page__title { color: $lab-ink; }
+a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-offset: 3px; }
 
-a:hover {
-  color: #2F80ED;   // hover 藍
-}
+/* 頁首 */
+.masthead { border-bottom: 1px solid $lab-line; }
+.masthead__menu-item a { font-weight: 500; }
+.site-title { font-family: $serif; font-weight: 700; color: $lab-ink; }
+
+/* 頁尾 */
+.page__footer { background-color: $lab-ink; color: #C9D7E4; }
+.page__footer a, .page__footer-follow a { color: #fff; }
 
 /* 按鈕 */
-.btn--primary {
-  background-color: #0B1F3B;
-  border-color: #0B1F3B;
-}
+.btn--primary { background-color: $lab-ink; border-color: $lab-ink; }
+.btn--primary:hover { background-color: $lab-steel; border-color: $lab-steel; }
 
-.btn--primary:hover {
-  background-color: #2F80ED;
-  border-color: #2F80ED;
-}
+/* ── 首頁 ── */
+.splash .page__content { margin-top: 0; }
 
-/* Footer */
-.page__footer {
-  background-color: #111827;
+.lab-hero {
+  margin: 0 calc(50% - 50vw) 0;
+  background: $lab-ink;
+  color: #E8EEF4;
+  overflow: hidden;
+}
+.lab-hero__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 4.5em 1.5em 4em;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2em;
+}
+.lab-hero__name {
+  font-family: $serif;
+  font-size: 1em;
+  color: $lab-amber;
+  margin: 0 0 1em;
+}
+.lab-hero__title {
+  font-family: $serif;
+  font-weight: 700;
+  font-size: 2.1em;
+  line-height: 1.45;
   color: #fff;
+  margin: 0 0 .8em;
+  letter-spacing: .02em;
+}
+.lab-hero__lead {
+  font-size: .9em;
+  line-height: 1.9;
+  color: #B9C8D6;
+  max-width: 32em;
+  margin: 0 0 2em;
+}
+.lab-hero__actions { margin: 0; display: flex; flex-wrap: wrap; gap: .75em; }
+.btn--lab-primary, .btn--lab-ghost {
+  font-size: .8em;
+  padding: .75em 1.6em;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.btn--lab-primary { background: #fff; color: $lab-ink !important; border: 1px solid #fff; }
+.btn--lab-primary:hover { background: $lab-amber; border-color: $lab-amber; }
+.btn--lab-ghost { background: transparent; color: #fff !important; border: 1px solid rgba(255,255,255,.45); }
+.btn--lab-ghost:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+.lab-hero__graph img { display: block; width: 100%; max-height: 22em; height: auto; }
+
+.lab-section { padding: 2.75em 0 0; }
+.splash .page__content > .lab-section:first-of-type { padding-top: 3em; }
+.lab-section__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid $lab-ink;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+}
+.page__content .lab-section__title {
+  font-family: $serif;
+  font-size: 1.35em;
+  color: $lab-ink;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.lab-section__more { font-size: .75em; color: $lab-muted; text-decoration: none; }
+.lab-section__more:hover { color: $lab-steel; text-decoration: underline; }
+
+/* 最新觀點：清單而非卡片 */
+.lab-posts { list-style: none; margin: 0; padding: 0; }
+.lab-posts__item {
+  display: grid;
+  grid-template-columns: 7.5em minmax(0, 1fr) auto;
+  gap: 1.25em;
+  align-items: baseline;
+  padding: 1.1em 0;
+  margin: 0;
+  border-bottom: 1px solid $lab-line;
+  max-width: none !important;
+}
+.lab-posts__date { font-size: .75em; color: $lab-muted; font-variant-numeric: tabular-nums; }
+.lab-posts__title { font-family: $serif; font-size: 1.05em; margin: 0 0 .3em; line-height: 1.5; }
+.lab-posts__title a { color: $lab-ink; text-decoration: none; }
+.lab-posts__title a:hover { color: $lab-steel; text-decoration: underline; text-underline-offset: .2em; }
+.lab-posts__excerpt { font-size: .8em; color: $lab-muted; margin: 0; line-height: 1.7; max-width: 40em; }
+.lab-posts__cat {
+  font-size: .7em;
+  color: $lab-steel;
+  border: 1px solid $lab-line;
+  padding: .15em .6em;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.lab-empty { color: $lab-muted; font-size: .85em; padding: 1em 0; }
+
+/* 專案卡片 */
+.lab-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.75em;
+  margin-top: 1.5em;
+}
+.lab-project { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.lab-project__img {
+  display: block;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  border: 1px solid $lab-line;
+  margin-bottom: .9em;
+  background: $lab-mist;
+}
+.lab-project__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lab-project__title { font-family: $serif; font-weight: 700; font-size: 1em; color: $lab-ink; margin-bottom: .35em; }
+.lab-project__excerpt { font-size: .78em; color: $lab-muted; line-height: 1.7; }
+.lab-project:hover .lab-project__title { color: $lab-steel; text-decoration: underline; text-underline-offset: .2em; }
+
+.lab-about { padding-bottom: 1.5em; }
+.page__content .lab-about .lab-section__title { border-bottom: 2px solid $lab-ink; padding-bottom: .5em; margin-bottom: 1em; }
+.lab-about p { font-size: .9em; }
+
+@media (max-width: 800px) {
+  .lab-hero__inner { grid-template-columns: 1fr; padding: 3em 1.25em 2.5em; }
+  .lab-hero__graph { order: -1; max-width: 22em; opacity: .8; }
+  .lab-hero__title { font-size: 1.6em; }
+  .lab-posts__item { grid-template-columns: 1fr; gap: .35em; }
+  .lab-posts__cat { justify-self: start; }
 }
