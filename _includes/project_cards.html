@@ -17,6 +17,9 @@
     {%- if p.excerpt %}
     <span class="lab-project__excerpt">{{ p.excerpt | strip_html | strip_newlines | truncate: 70 }}</span>
     {%- endif %}
+    {%- if p.tags.size > 0 %}
+    {% include project_tags.html tags=p.tags max=4 %}
+    {%- endif %}
   </a>
   {%- endfor %}
 </div>

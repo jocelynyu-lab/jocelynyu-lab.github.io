@@ -49,7 +49,7 @@ body { letter-spacing: .01em; }
 .page__content h3 { font-size: 1.1em; }
 .page__content hr { border: 0; border-top: 1px solid $lab-line; margin: 1.6em 0; }
 .layout--single .page__inner-wrap header { margin-bottom: 1.75em; padding-bottom: 1.25em; border-bottom: 1px solid $lab-line; }
-.layout--single .page__content > h2:first-child { margin-top: 0; }
+.layout--single .page__content > h2:first-child, .layout--project .page__content > h2:first-child { margin-top: 0; }
 .page__meta { margin-top: .6em; }
 .page__title { font-size: 1.9em; line-height: 1.35; letter-spacing: .01em; }
 .page__meta { color: $lab-muted; }
@@ -117,7 +117,7 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .lab-hero__graph img { display: block; width: 100%; max-height: 22em; height: auto; }
 
 .lab-section { padding: 2.75em 0 0; }
-.splash .page__content > .lab-section:first-of-type { padding-top: 3em; }
+.lab-hero + .lab-section { padding-top: 3em; }
 .lab-section__head {
   display: flex;
   align-items: baseline;
@@ -189,12 +189,28 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .page__content .lab-about .lab-section__title { border-bottom: 2px solid $lab-ink; padding-bottom: .5em; margin-bottom: 1em; }
 .lab-about p { font-size: .9em; }
 
+/* 專案標籤 */
+.lab-tags { display: flex; flex-wrap: wrap; gap: .4em; margin-top: .75em; }
+.lab-tag {
+  font-size: .68em;
+  line-height: 1.5;
+  color: $lab-steel;
+  background: $lab-mist;
+  border: 1px solid $lab-line;
+  border-radius: 2px;
+  padding: .1em .55em;
+  white-space: nowrap;
+}
+.lab-project-tags { margin: 0 0 1.75em; }
+.lab-project-tags .lab-tags { margin-top: 0; }
+.lab-project-tags .lab-tag { font-size: .75em; }
+
 /* 內頁標題區（觀點、所有文章、專案） */
 .lab-page-head { padding: 2.75em 0 0; }
 .lab-page-head__title { font-size: 1.9em; color: $lab-ink; margin: 0 0 .4em; font-weight: 700; }
-.lab-page-head__lead { color: $lab-muted; font-size: .9em; line-height: 1.8; margin: 0; max-width: 36em; }
+.page__content .lab-page-head__lead { color: $lab-muted; font-size: .9em; line-height: 1.8; margin: 0; max-width: 36em; }
 .lab-section__count { font-size: .75em; color: $lab-muted; }
-.lab-section--flush { padding-top: 1em; }
+.lab-section--flush .lab-projects { margin-top: 0; }
 .lab-topics { display: flex; flex-wrap: wrap; gap: .5em; margin: 1.75em 0 0; }
 .lab-topics__item {
   font-size: .8em;
@@ -207,11 +223,11 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .lab-topics__item span { color: $lab-muted; margin-left: .5em; font-variant-numeric: tabular-nums; }
 .lab-topics__item:hover { border-color: $lab-ink; }
 .lab-topic { scroll-margin-top: 5em; }
-.lab-page-head + .lab-section, .lab-topics + .lab-section { padding-top: 2em; }
+.lab-page-head + .lab-section, .lab-topics + .lab-section { padding-top: 1.75em; }
 
 /* 手機與平板：隱藏作者側欄，讓文章直接從標題開始 */
 @media (max-width: 1023px) {
-  .layout--single .sidebar { display: none; }
+  .layout--single .sidebar, .layout--project .sidebar { display: none; }
 }
 
 @media (max-width: 800px) {

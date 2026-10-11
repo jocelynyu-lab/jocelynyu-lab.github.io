@@ -1,0 +1,11 @@
+{%- comment -%}
+  專案標籤：卡片與專案內頁共用
+  參數：tags=標籤陣列  max=最多顯示幾個（選用）
+{%- endcomment -%}
+{%- assign tag_list = include.tags -%}
+{%- if include.max -%}{%- assign tag_list = tag_list | slice: 0, include.max -%}{%- endif -%}
+{%- if tag_list.size > 0 -%}
+<span class="lab-tags">
+  {%- for t in tag_list -%}<span class="lab-tag">{{ t }}</span>{%- endfor -%}
+</span>
+{%- endif -%}

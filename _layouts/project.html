@@ -1,0 +1,7 @@
+---
+layout: single
+---
+{%- if page.tags.size > 0 -%}
+<div class="lab-project-tags">{% include project_tags.html tags=page.tags %}</div>
+{%- endif %}
+{{ content }}
