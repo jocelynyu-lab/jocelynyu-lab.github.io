@@ -1,7 +1,7 @@
 main:
-  - title: "About"
+  - title: "觀點"
+    url: /insights/
+  - title: "專案"
+    url: /projects/
+  - title: "關於"
     url: /about/
-  - title: "Posts"
-    url: /posts/    
-  - title: "GitHub"
-    url: https://github.com/jocelynyu-lab
