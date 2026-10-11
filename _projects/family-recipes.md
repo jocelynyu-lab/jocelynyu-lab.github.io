@@ -1,9 +1,9 @@
 ---
 title: "我們家的食譜"
-order: 1
+order: 4
 excerpt: "家庭成員的許願天地，紀錄每道食譜的喜好"
 header:
-  teaser: /assets/images/projects/supply-chain-risk.svg
+  teaser: /assets/images/projects/family-recipes.svg
   overlay_image: /assets/images/header.jpg
   overlay_filter: 0.6
 tags:
