@@ -1,5 +1,5 @@
 ---
-title: "我們家的食譜"
+title: "Family-Recipes"
 order: 4
 excerpt: "家庭成員的許願天地，紀錄每道食譜的喜好"
 header:
