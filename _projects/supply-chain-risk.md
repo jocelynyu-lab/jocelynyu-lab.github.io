@@ -1,6 +1,6 @@
 ---
 title: "供應鏈風險網絡"
-order: 1
+order: 4
 excerpt: "以企業關聯網絡分析供應鏈上下游的風險傳遞路徑。"
 header:
   teaser: /assets/images/projects/supply-chain-risk.svg
