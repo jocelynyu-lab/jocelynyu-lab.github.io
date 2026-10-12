@@ -14,8 +14,10 @@ toc_sticky: true
 ---
 大腦拒絕不了的行銷：100個完美挑動感官的行銷法則
 Brainfluence: 100 Ways to Persuade and Convince Consumers with Neuromarketing
+[Link](https://www.books.com.tw/products/0010972970?srsltid=AU7gw4UKwmKifM9CjpKo4ZVQ3JfgB0zx4445kI6hspLkTA7HmoI-NJvb)
 
 > 把最重要的一句話放在這裡，作為全文的論點錨點。
+
 	1. 行銷只能在第一秒成功
 	2. Gerald Zaltman 95%理論
 	3. 無意識 Nonconscious
@@ -57,4 +59,3 @@ Brainfluence: 100 Ways to Persuade and Convince Consumers with Neuromarketing
 	38. #93網路的黃金比例
 
 
-[Link](https://www.books.com.tw/products/0010972970?srsltid=AU7gw4UKwmKifM9CjpKo4ZVQ3JfgB0zx4445kI6hspLkTA7HmoI-NJvb)
