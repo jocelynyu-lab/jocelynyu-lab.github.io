@@ -32,7 +32,8 @@ $masthead-link-color: $lab-ink;
 $masthead-link-color-hover: $lab-steel;
 $border-color: $lab-line;
 $footer-background-color: $lab-ink;
-
+$doc-font-size-large: 17;    // 電腦，螢幕寬 1024px 以上（預設 20）
+$doc-font-size-x-large: 18;  // 大螢幕，螢幕寬 1280px 以上（預設 22）
 @import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
