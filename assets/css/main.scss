@@ -293,6 +293,11 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .lab-topic { scroll-margin-top: 5em; }
 .lab-page-head + .lab-section, .lab-topics + .lab-section { padding-top: 1.75em; }
 
+/* 文章頁與專案頁不顯示作者側欄：內容從左側開始，不留空白欄 */
+@media (min-width: 1024px) {
+  .layout--single .page, .layout--project .page { float: none; width: 100%; }
+}
+
 /* 手機與平板：隱藏作者側欄，讓文章直接從標題開始 */
 @media (max-width: 1023px) {
   .layout--single .sidebar, .layout--project .sidebar { display: none; }
