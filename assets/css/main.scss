@@ -183,7 +183,15 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid $lab-amber; outline-off
 .lab-project__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .lab-project__title { font-family: $serif; font-weight: 700; font-size: 1em; color: $lab-ink; margin-bottom: .35em; }
 .lab-project__excerpt { font-size: .78em; color: $lab-muted; line-height: 1.7; }
-.lab-project:hover .lab-project__title { color: $lab-steel; text-decoration: underline; text-underline-offset: .2em; }
+/* 卡片滑過：不加底線，改用標題變色與圖片邊框加深 */
+.page__content a.lab-project,
+.page__content a.lab-project:hover,
+.page__content a.lab-project:focus,
+.lab-project * { text-decoration: none !important; }
+.lab-project__img { transition: border-color .2s ease; }
+.lab-project__title { transition: color .2s ease; }
+.lab-project:hover .lab-project__title { color: $lab-steel; }
+.lab-project:hover .lab-project__img { border-color: $lab-ink; }
 
 .lab-about { padding-bottom: 1.5em; }
 .page__content .lab-about .lab-section__title { border-bottom: 2px solid $lab-ink; padding-bottom: .5em; margin-bottom: 1em; }
